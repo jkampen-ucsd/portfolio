@@ -4,31 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="style.css">    
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <nav>
         <a href="../index.html">Home</a>
         <a href="../resume/index.html">Resume</a>
         <a href="../projects/index.html">Projects</a>
-        <a href="../contact/index.html">Contact</a>
+        <a href="../contact/index.html"  class="current">Contact</a>
         <a href="https://github.com/jkampen-ucsd" target="_blank">GitHub</a>
     </nav>
     <h1>Contact</h1>
     <form action="mailto:jkampen@ucsd.edu" method="POST" enctype="text/plain">
         <label>
             Email:
-            <input name="email" type="email">
+            <input name="email" type="email" required>
         </label>
         <label>
             Subject:
-            <input name="subject">
+            <input name="subject" type="text" required>
         </label>
         <label>
             Message:
-            <textarea name="body"></textarea>
+            <textarea name="body" required></textarea>
         </label>
-        <button>Submit</button>
+        <button type="submit">Send</button>
     </form>
 </body>
 </html>
