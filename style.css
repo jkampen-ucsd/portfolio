@@ -1,5 +1,5 @@
 html {
-    --color-accent: oklch(65% 50% 0);
+    --color-accent: oklch(66.128% 0.14588 253.364);
     accent-color: var(--color-accent);
 }
 
@@ -181,7 +181,6 @@ h1 {
     line-height: 1.6;
 }
 
-/* Responsive resume layout */
 @media (max-width: 600px) {
     .resume-job-header {
         flex-direction: column;
