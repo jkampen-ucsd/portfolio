@@ -71,13 +71,17 @@ form button {
     margin: 0;
 }
 
-h1 {
-  font-size: 400%;
-}
 
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.1;
     text-wrap: balance;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 5vw, 4rem);
+    text-align: left;
+    white-space: nowrap;
+    text-wrap: nowrap;
 }
 
 .resume {
