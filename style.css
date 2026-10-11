@@ -71,21 +71,16 @@ form button {
     margin: 0;
 }
 
-h1 {
-    font-size: clamp(2rem, 5vw, 4rem);
-    line-height: 1.1;
-    text-wrap: balance;
-}
-
-/* Homepage heading only */
-body > h1 {
-    font-size: clamp(1.5rem, 5vw, 4rem);
-    white-space: nowrap;
-}
-
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.1;
     text-wrap: balance;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 5vw, 4rem);
+    text-align: center;
+    white-space: nowrap;
+    text-wrap: nowrap;
 }
 
 .resume {
