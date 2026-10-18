@@ -13,7 +13,12 @@ let pages = [
     { url: 'https://github.com/jkampen-ucsd', title: 'GitHub' }
 ];
 
-const BASE_PATH = new URL('.', import.meta.url).pathname;
+const BASE_PATH = (
+    location.hostname === "localhost" ||
+    location.hostname === "127.0.0.1"
+)
+    ? "/"
+    : "/portfolio/";
 
 let nav = document.createElement('nav');
 
