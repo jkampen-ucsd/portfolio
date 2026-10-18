@@ -1,4 +1,5 @@
 html {
+    color-scheme: light dark;
     --color-accent: oklch(46.189% 0.16347 257.265);
     accent-color: var(--color-accent);
 }
@@ -11,9 +12,10 @@ body {
 }
 
 nav {
+    --border-color: oklch(50% 10% 200 / 40%);
     display: flex;
     margin-bottom: 1em;
-    border-bottom: 1px solid oklch(80% 3% 200);
+    border-bottom: 1px solid var(--border-color);
 }
 
 nav a {
@@ -25,17 +27,17 @@ nav a {
 }
 
 nav a.current {
-    border-bottom: 0.4em solid oklch(80% 3% 200);
+    border-bottom: 0.4em solid var(--border-color);
     padding-bottom: 0.1em;
 }
 
 nav a:hover {
     border-bottom: 0.4em solid var(--color-accent);
     padding-bottom: 0.1em;
-    background-color: oklch(from var(--color-accent) 95% 5% h);
+    background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
-input, textarea, button {
+input, textarea, button, select {
     font: inherit;
 }
 
@@ -90,7 +92,7 @@ h1 {
 .resume-header {
     text-align: center;
     padding: 1.5em;
-    background-color: oklch(95% 2% 200);
+    background-color: color-mix(in oklch, canvastext 5%, canvas);
     border-radius: 0.5em;
     margin-bottom: 2em;
 }
@@ -140,8 +142,8 @@ h1 {
 }
 
 .resume article {
-    background-color: oklch(98% 1% 200);
-    border-left: 4px solid oklch(80% 3% 200);
+    background-color: color-mix(in oklch, canvastext 3%, canvas);
+    border-left: 4px solid oklch(50% 10% 200 / 40%);
     padding: 1.2em;
     margin-bottom: 1.5em;
     border-radius: 0.3em;
@@ -253,7 +255,7 @@ h1 {
 .home-portfolio {
     text-align: center;
     padding: 2em;
-    background-color: oklch(97% 2% 200);
+    background-color: color-mix(in oklch, canvastext 4%, canvas);
     border-radius: 0.5em;
 }
 
@@ -270,6 +272,13 @@ h1 {
 
 .home-button:hover {
     filter: brightness(0.9);
+}
+
+.home-subtitle,
+.resume-header p,
+.resume-job-header span,
+.resume-employer {
+    color: color-mix(in oklch, canvastext 65%,canvas);
 }
 
 @media (max-width: 600px) {
@@ -289,4 +298,17 @@ h1 {
     .home-portfolio {
         padding: 1.2em;
     }
+}
+
+.color-scheme {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 80%;
+}
+
+.color-scheme select {
+    font: inherit;
+    padding: 0.3em;
+    border-radius: 0.3em;
 }
