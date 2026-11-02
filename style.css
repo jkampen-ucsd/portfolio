@@ -571,3 +571,24 @@ h1 {
 .legend-item.selected {
     font-weight: bold;
 }
+
+.color-scheme {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+@media (max-width: 600px) {
+    .color-scheme {
+        position: static;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 0.5em;
+        margin: 0.5em 0 1em;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+}
